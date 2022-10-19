@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full flex h-10">
+	<div class="w-full flex h-10 z-10">
         <button class="
             w-full rounded-l-full
             h-10 w-10
