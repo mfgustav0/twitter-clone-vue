@@ -1,30 +1,40 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+    <div class="min-w-screen min-h-screen px-8">
+        <div class="flex justify-between w-full h-full px-8">
+            <HeaderApp />
+            <main class="w-3/4 flex justify-between h-full">
+                <div class="w-full h-full">
+                    <router-view/>
+                </div>
+                <SearchBar />
+            </main>
+        </div>
+    </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+    import HeaderApp from '@/components/HeaderApp';
+    import SearchBar from '@/components/SearchBar';
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    export default {
+        name: 'App',
+        components: {
+            HeaderApp,
+            SearchBar
+        }
     }
-  }
-}
+</script>
+
+<style lang="scss">
+    body {
+        background: rgb(0 0 0);
+
+        #app {
+            font-family: Avenir, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-align: center;
+            color: #2c3e50;
+        }
+    }
 </style>
