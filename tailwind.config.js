@@ -7,7 +7,11 @@ module.exports = {
         'very-dark': '#202327',
         'very-dark-400': '#1d1f23',
         'very-dark-800': '#16181c',
-        'vivid-blue': '#1d9bf0',
+        'vivid-blue': {
+          light: '#1d9bf01a',
+          DEFAULT: '#1d9bf0',
+          dark: '#1d9bf0',
+        },
         'logout': '#242d34',
       },
       boxShadow: {

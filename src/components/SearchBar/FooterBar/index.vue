@@ -1,5 +1,5 @@
 <template>    
-    <nav class="flex flex-row flex-wrap">
+    <nav class="flex flex-row flex-wrap mb-20 text-gray-500">
         <link-footer 
             label="Termos de Serviço"
             url="https://twitter.com/tos"

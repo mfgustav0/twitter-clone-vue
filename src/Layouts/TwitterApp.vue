@@ -9,18 +9,21 @@
                 <SearchBar />
             </main>
         </div>
+        <ChatUser />
     </div>
 </template>
 
 <script>
     import HeaderApp from '@/components/HeaderApp';
     import SearchBar from '@/components/SearchBar';
+    import ChatUser from '@/components/ChatUser';
 
 	export default {
 		name: 'TwitterApp',
 		components: {
 			HeaderApp,
-			SearchBar
+			SearchBar,
+            ChatUser
 		}
 	}
 </script>
