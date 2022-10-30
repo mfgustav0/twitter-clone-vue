@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+// const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
@@ -22,5 +24,28 @@ module.exports = {
       helvetica: ['HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', 'sans-serif'],
     },
   },
-  plugins: [],
+  plugins: [
+    // plugin(function({ addComponents }) {
+    //   addComponents({
+    //     '.scrollbar': {
+    //       '&::-webkit-scrollbar': {
+    //         'width': '1rem',
+    //         'height': '1rem'
+    //       },
+    //       '&::-webkit-scrollbar-track': {
+    //         'border-radius': '100vh',
+    //         'background': '#f7f4ed',
+    //       },
+    //       '&::-webkit-scrollbar-thumb': {
+    //         'background': 'rgb(48 51 54)',
+    //         'border-radius': '100vh',
+    //         'border': '3px solid #f6f7ed',
+    //       },
+    //       '&::-webkit-scrollbar-thumb:hover': {
+    //         'background': 'rgb(29 31 35 / 1)',
+    //       }
+    //     },
+    //   })
+    // })
+  ]
 }

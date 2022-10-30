@@ -3,7 +3,7 @@
         <div class="flex justify-between w-full h-full px-8">
             <HeaderApp />
             <main class="w-3/4 flex justify-between h-full">
-                <div class="w-full h-full">
+                <div class="w-full h-full min-h-screen">
                     <slot></slot>
                 </div>
                 <SearchBar />
