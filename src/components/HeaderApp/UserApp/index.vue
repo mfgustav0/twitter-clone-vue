@@ -25,6 +25,7 @@
 </template>
 
 <script>
+    import user from '@/user.js';
     import ButtonIcon from './ButtonIcon';
     import UserChange from './UserChange';
 
@@ -33,11 +34,7 @@
         data() {
             return {
                 userClick: false,
-                user: {
-                    name: 'User',
-                    username: '@User',
-                    image: 'https://via.placeholder.com/70'
-                }
+                user
             }
         },
         methods: {

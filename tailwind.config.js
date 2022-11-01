@@ -14,6 +14,14 @@ module.exports = {
           DEFAULT: '#1d9bf0',
           dark: '#1d9bf0',
         },
+        'green-tweet': {
+          light: '#00ba7c',
+          dark: 'rgba(0, 186, 124, 0.1)',
+        },
+        'heart-tweet': {
+          light: '#f91880', 
+          dark: '#f918801a'
+        },
         'logout': '#242d34',
       },
       boxShadow: {

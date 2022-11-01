@@ -26,15 +26,13 @@
 </template>
 
 <script>
+    import user from '@/user.js';
+
     export default {
         name: 'UserChange',
         data() {
             return {
-                user: {
-                    name: 'User',
-                    username: '@User',
-                    image: 'https://via.placeholder.com/70'
-                }
+                user
             }
         }
     }

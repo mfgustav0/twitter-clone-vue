@@ -1,12 +1,6 @@
 <template>
 	<div class="w-full h-full flex flex-row justify-start">
-		<!-- <WorldIcon />
-		<ImageIcon />
-		<GifIcon />
-		<PollIcon />
-		<EmojiIcon />
-		<CalendarIcon />
-		<LocationIcon /> -->
+		<!-- <WorldIcon /> -->
 
 		<div class="w-1/12 px-1">
 			<img :src="user.image" class="rounded-full" />
@@ -79,6 +73,7 @@
 	import LocationIcon from './Icons/LocationIcon';
 	import PlusIcon from './Icons/PlusIcon';
 	import CircularBar from './CircularBar';
+    import user from '@/user.js';
 
 	export default {
 		name: 'TweetApp',
@@ -99,11 +94,7 @@
 				maxCaracters: 120,
 				content: '',
 				active: false,
-				user: {
-					name: 'User',
-					username: '@User',
-					image: 'https://via.placeholder.com/70'
-				}
+				user
 			}
 		},
 		methods: {

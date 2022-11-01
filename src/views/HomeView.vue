@@ -15,7 +15,11 @@
                 <TweetApp />
             </div>
             <div class="w-full bg-white">
-                <LogoApp />
+                <TweetArticle 
+                    v-for="tweet of tweets"
+                    :key="tweet.id"
+                    :tweet="tweet"
+                />
             </div>
         </section>
     </twitter-app>
@@ -23,21 +27,23 @@
 
 <script>
     import TwitterApp from '@/Layouts/TwitterApp';
-    import LogoApp from '@/components/LogoApp';
+    import TweetArticle from '@/components/TweetArticle';
     import TweetApp from '@/components/TweetApp';
     import HighlightsIcon from '@/components/HomeApp/Icons/HighlightsIcon';
+    import getTweets from '@/tweets.js';
 
     export default {
         name: 'HomeView',
         components: {
             TwitterApp,
-            LogoApp,
+            TweetArticle,
             TweetApp,
             HighlightsIcon
         },
         data() {
             return {
-                auth: true
+                auth: true,
+                tweets: getTweets(2)
             }
         }
     }
