@@ -33,7 +33,7 @@
 	import ArrowDownIcon from './Icons/ArrowDownIcon';
 	import ArrowUpIcon from './Icons/ArrowUpIcon';
 	import ChatItem from './ChatItem';
-	import chats from './chats.js';
+	import chats from '@/store/chats.js';
 
 	export default {
 		name: 'ChatUser',

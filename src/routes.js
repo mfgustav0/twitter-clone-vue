@@ -6,27 +6,27 @@ const routes = [
 	},
 	{
 		label: 'Explorar',
-		to: '/about',
+		to: '/',
 		icon: () => import('@/components/HeaderApp/NavBar/Icons/HashtagIcon.vue')
 	},
 	{
 		label: 'Notificações',
-		to: '/about',
+		to: '/',
 		icon: () => import('@/components/HeaderApp/NavBar/Icons/NotifyIcon.vue')
 	},
 	{
 		label: 'Mensagens',
-		to: '/about',
+		to: '/',
 		icon: () => import('@/components/HeaderApp/NavBar/Icons/MessageIcon.vue')
 	},
 	{
 		label: 'Perfil',
-		to: '/about',
+		to: '/',
 		icon: () => import('@/components/HeaderApp/NavBar/Icons/UserIcon.vue')
 	},
 	{
 		label: 'Mais',
-		to: '/about',
+		to: '/',
 		icon: () => import('@/components/HeaderApp/NavBar/Icons/MoreIcon.vue')
 	}
 ];

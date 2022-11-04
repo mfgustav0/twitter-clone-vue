@@ -6,9 +6,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'very-dark': '#202327',
-        'very-dark-400': '#1d1f23',
-        'very-dark-800': '#16181c',
+        'very-dark': {
+          DEFAULT: '#202327',
+          '400': '#1d1f23',
+          '200': 'rgb(41 43 48 / 95%)',
+          '800': '#16181c',
+        },
         'vivid-blue': {
           light: '#1d9bf01a',
           DEFAULT: '#1d9bf0',
@@ -32,28 +35,5 @@ module.exports = {
       helvetica: ['HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', 'sans-serif'],
     },
   },
-  plugins: [
-    // plugin(function({ addComponents }) {
-    //   addComponents({
-    //     '.scrollbar': {
-    //       '&::-webkit-scrollbar': {
-    //         'width': '1rem',
-    //         'height': '1rem'
-    //       },
-    //       '&::-webkit-scrollbar-track': {
-    //         'border-radius': '100vh',
-    //         'background': '#f7f4ed',
-    //       },
-    //       '&::-webkit-scrollbar-thumb': {
-    //         'background': 'rgb(48 51 54)',
-    //         'border-radius': '100vh',
-    //         'border': '3px solid #f6f7ed',
-    //       },
-    //       '&::-webkit-scrollbar-thumb:hover': {
-    //         'background': 'rgb(29 31 35 / 1)',
-    //       }
-    //     },
-    //   })
-    // })
-  ]
+  plugins: []
 }

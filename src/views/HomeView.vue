@@ -30,7 +30,7 @@
     import TweetArticle from '@/components/TweetArticle';
     import TweetApp from '@/components/TweetApp';
     import HighlightsIcon from '@/components/HomeApp/Icons/HighlightsIcon';
-    import getTweets from '@/tweets.js';
+    import getTweets from '@/store/tweets.js';
 
     export default {
         name: 'HomeView',

@@ -25,7 +25,7 @@
 </template>
 
 <script>
-    import user from '@/user.js';
+    import user from '@/store/user.js';
     import ButtonIcon from './ButtonIcon';
     import UserChange from './UserChange';
 

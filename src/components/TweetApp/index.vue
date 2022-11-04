@@ -7,17 +7,18 @@
 		</div>
 		<div class="w-full flex flex-col px-1">
 			<div v-show="active">
-				<select>
-					<option>Qualquer pessoa</option>
-				</select>
+				<AudienceTweet
+					:audience="audience"
+					@update:audience="updateAudience"
+				/>
 			</div>
 			<div class="w-full">
 				<textarea
-					class="w-full h-full placeholder:text-gray-600 bg-black text-white text-lg caret-blue-500 focus:caret-indigo-500"
+					class="w-full h-full placeholder:text-gray-600 bg-black text-white text-lg focus:outline-0"
 					placeholder="O que está acontecendo?"
 					@click="clickTweet"
 					v-model="content"
-					@keydown="keyupContent"
+					@keyup="keyupContent"
 				></textarea>
 			</div>
 			<div class="w-full flex flex-row itens-center justify-between py-2">
@@ -64,6 +65,7 @@
 </template>
 
 <script>
+	import { ref, toRefs, reactive } from 'vue';
 	// import WorldIcon from './Icons/WorldIcon';
 	import ImageIcon from './Icons/ImageIcon';
 	import GifIcon from './Icons/GifIcon';
@@ -73,7 +75,8 @@
 	import LocationIcon from './Icons/LocationIcon';
 	import PlusIcon from './Icons/PlusIcon';
 	import CircularBar from './CircularBar';
-    import user from '@/user.js';
+	import AudienceTweet from './AudienceTweet';
+    import user from '@/store/user.js';
 
 	export default {
 		name: 'TweetApp',
@@ -87,22 +90,35 @@
 			LocationIcon,
 			CircularBar,
 			PlusIcon,
+			AudienceTweet,
 		},
-		data() {
+		setup() {
+			const caracters = ref(0);
+			const maxCaracters = ref(120);
+			const content = ref('');
+			const active = ref(true);
+			const audience = ref('public');
+
+			const methods = reactive({
+				clickTweet() {
+					// this.active = String(this.content).trim().length <= 0 ? !this.active : true
+				},
+				keyupContent() {
+					caracters.value = String(content.value).length
+				},
+				updateAudience(value) {
+					audience.value = value 
+				}
+			});
+
 			return {
-				caracters: 0,
-				maxCaracters: 120,
-				content: '',
-				active: false,
-				user
-			}
-		},
-		methods: {
-			clickTweet() {
-				this.active = String(this.content).trim().length <= 0 ? !this.active : true
-			},
-			keyupContent() {
-				this.caracters = String(this.content).length
+				caracters,
+				maxCaracters,
+				content,
+				active,
+				audience,
+				user,
+				...toRefs(methods)
 			}
 		}
 	}

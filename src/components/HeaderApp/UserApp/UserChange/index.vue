@@ -26,7 +26,7 @@
 </template>
 
 <script>
-    import user from '@/user.js';
+    import user from '@/store/user.js';
 
     export default {
         name: 'UserChange',
