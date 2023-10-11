@@ -9,7 +9,7 @@ const getTweets = (max=4) => {
 
 	for (let i = 1; i <= max; i++) {
 		tweets.push({
-			id: crypto.randomUUID(),
+			id: 'AA-TT' + (Math.random() * 10),
 			user: {
 				image: 'https://via.placeholder.com/70',
 				name: 'User ' + i,
